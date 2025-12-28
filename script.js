@@ -75,14 +75,16 @@ async function loadCars() {
   snapshot.forEach(doc => {
     const c = doc.data();
 
-    carsDiv.innerHTML += `
-      <div class="car">
-        <h3>${c.name || ''}</h3>
-        <img src="${c.image || 'https://via.placeholder.com/200'}">
-        <p>${c.desc || ''}</p>
-        <b class="${statusClass}">${c.status}</b>
-      </div>
-    `;
+  carsDiv.innerHTML += `
+  <div class="car">
+    <h3>${c.name}</h3>
+    <img src="${c.image}">
+    <p>${c.desc}</p>
+    <b>${c.status}</b>
+
+    ${c.errors ? <div class="car-error">${c.errors}</div> : ``}
+  </div>
+`;
   });
 let statusClass = '';
 if (c.status.toLowerCase().includes('баг') || c.status.toLowerCase().includes('ошибка')) statusClass = 'status-bug';

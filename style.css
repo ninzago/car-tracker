@@ -115,6 +115,11 @@ footer {
   font-weight: bold; /* текст жирный */
   color: #00aaff;   /* красивый голубой цвет, можно менять на любой */
 }
+.car .errors {
+  color: #ff4d4d;
+  font-weight: normal;
+  font-size: 14px;
+}
 /* Поиск по центру */
 #search {
   display: block;
@@ -164,4 +169,8 @@ footer {
   color: #e0f7fa;
   background-color: rgba(41, 64, 120, 0.8); /* темно-синий, чуть светлее карточки */
   box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+.car .desc {
+  color: #8b0000;
+  font-weight: bold;
 }
